@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conventional-changelog-gen"
+version = "0.1.0"
+description = "Generate a CHANGELOG.md from Conventional Commits in your git history."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Aslam Ahamed" }
+]
+requires-python = ">=3.9"
+keywords = [
+    "changelog",
+    "conventional-commits",
+    "git",
+    "release",
+    "devops",
+    "semver",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/intruderfr/conventional-changelog-gen"
+Source = "https://github.com/intruderfr/conventional-changelog-gen"
+Issues = "https://github.com/intruderfr/conventional-changelog-gen/issues"
+
+[project.scripts]
+conventional-changelog-gen = "conventional_changelog.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["conventional_changelog*"]
+exclude = ["tests*"]
